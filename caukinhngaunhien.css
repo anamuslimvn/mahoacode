@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'hafs14';
+  src: local('KFGQPC HAFS Uthmanic Script Regular'),
+       url(https://dn.jsdelivr.net/gh/fawazahmed0/quran-api@1/fonts/hafs-uthmanic-v14-full.woff2);
+}
+@font-face {
+  font-family: 'hafs18';
+  src: url("https://cdn.jsdelivr.net/gh/thetruetruth/quran-data-kfgqpc@main/hafs/font/hafs.18.woff2");
+}
+
+
+
+        .containerrandomquran {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            justify-content: space-between;
+        }
+
+        .buttonrandomquran {
+            padding: 8px 2px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buttonrandomquran:hover, .buttonquran:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .buttonquran {
+            margin-left: 6px;
+            padding: 8px 4px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .buttonquran:hover {
+            background-color: #0056b3;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .icon-audio, .copy-button {
+            background: transparent;
+            color: #007bff;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .icon-audio:active, .copy-button:active {
+            transform: scale(0.9);
+            background-color: #e0e0e0;
+        }
+
+        .copy-button svg, .icon-audio svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+        }
+
+        .verserandom {
+            margin-bottom: 20px;
+        }
+
+        .quranarrandom {         
+   
+            font-family: 'hafs18',hafs14;
+            font-size: 30px;
+            color: #333;
+            font-weight: 500;
+            width: 100%;
+            padding: 5px;
+            background-color: #f9f9f9;
+            margin-bottom: 5px;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+
+
+        .quranvirandom {
+            font-family: 'Arial', sans-serif;
+            font-size: 22px;
+            color: #333;
+            padding: 5px;
+            background-color: #eef;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .ayat {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            background-color: #ccf;
+            color: #000;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .ayat-details {
+            text-align: center;
+            flex: 1;
+        }
+
+        .language-buttons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .language-button {
+            padding: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .language-button:hover {
+            background-color: #0056b3;
+        }
+
+        .language-button.active {
+            background-color: #0056b3;
+          
+        }
+      
+       .textnhac {
+    font-size: 18px;
+          color: red;
+           margin-bottom: 10px;
+  }
+      

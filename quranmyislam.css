@@ -1,0 +1,257 @@
+@font-face {  font-family: 'hafs18';  src: local('KFGQPC HAFS Uthmanic Script Regular'),       url(https://dn.jsdelivr.net/gh/fawazahmed0/quran-api@1/fonts/hafs-uthmanic-v14-full.woff2);}
+@font-face {  font-family: 'hafs14';  src: url("https://cdn.jsdelivr.net/gh/thetruetruth/quran-data-kfgqpc@main/hafs/font/hafs.18.woff2");}
+
+      
+      .post-body p {
+    margin-bottom: 2px!important;
+      } 
+        .colorchuongso {
+            color: #007bff !important;
+        }
+  
+      .btnnext {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    background-color: #0000002b;
+    margin: 0 5px;
+}
+        .btnnext:hover {
+            background-color: #ffa500;
+        }
+        .containernext {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6px;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 0;
+            border-radius: 4px;
+        }
+        .text-layer {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        .text-layer span {
+            margin-right: 5px;
+        }
+   
+        .svgnext {
+            fill: currentColor;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+            
+     
+
+  
+        /* Existing CSS */
+        .button-container {
+            margin-bottom: 20px;
+            display: flex; /* Use flexbox for alignment */
+            justify-content: space-between; /* Space out buttons between the left and right ends */
+            align-items: center; /* Center items vertically */
+        }
+        
+      .button-group-left {
+            display: flex;
+            gap: 10px;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .button-group-right {
+            display: flex;
+            gap: 10px; /* Space between buttons */
+            margin-left: auto; /* Pushes the button group to the right */
+        }
+        
+        .button {
+            padding: 6px 8px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .button.active {
+            background-color: #ffa500;
+        }
+   
+
+
+   
+        .quranar {
+         font-family: 'hafs14',hafs18;
+            font-size: 30px;
+            color: #333;
+            font-weight: 500;
+            width: 100%;
+            padding: 5px;
+            background-color: #f9f9f900;
+            margin-bottom: 5px;
+            line-height: 1.8;
+            text-align: center;
+        }
+   
+   .verse-playing {
+    background-color: #fff0aac7 !important;
+}
+
+   
+   
+   
+   
+        .verse {
+            margin-bottom: 20px;
+            position: relative; /* For positioning the buttons */
+        }   
+   
+
+        .quranvi {
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+            color: #333;
+            width: 100%;
+            padding: 5px;
+            background-color: #eeeeffb3;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .footnotes {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            color: #555;
+            width: 100%;
+            padding: 5px;
+            background-color: #f4f4f4;
+            margin-top: 10px;
+            line-height: 1.4;
+            border-top: 1px solid #ccc;
+        }
+
+        .btn-container {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            position: relative;
+            background-color: transparent;
+            color: #007bff;
+            border: none;
+            cursor: pointer;
+            font-size: 20px; /* Adjust size as needed */
+            transition: transform 0.2s, background-color 0.2s; /* Smooth transitions */
+        }
+
+        .btn:active {
+            transform: scale(0.9); /* Scale down the button when clicked */
+            background-color: #e0e0e0; /* Change background color on click */
+        }
+
+        .message {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 14px; /* Adjust size as needed */
+            margin-top: 5px; /* Adjust distance from button */
+        }
+
+        .show {
+            opacity: 1;
+        }
+
+        .ayat {
+            padding: 5px;
+            background-color: #ccf;
+            color: #000;
+            text-align: center;
+            font-size: 18px;
+            width: 100%;
+            line-height: 1.2;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+   
+   
+   .language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+#language-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+#language-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#language-dropdown button {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: white;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+
+#language-dropdown button:hover {
+    background-color: #f1f1f1;
+}
+
+
+.language-selector:hover #language-dropdown {
+    display: block;
+}
+
+   
+   
+   
+   #reciter-select {
+    padding: 10px;           
+    border: 1px solid #ccc;  
+    border-radius: 5px;      
+    font-size: 16px;         
+    background-color: #f9f9f9; 
+}
+   

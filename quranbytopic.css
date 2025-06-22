@@ -1,0 +1,199 @@
+      /* --- 1. ĐỊNH NGHĨA FONT CHỮ --- */
+@font-face {
+    font-family: "hafs18";
+    src: local("KFGQPC HAFS Uthmanic Script Regular"), url(https://cdn.jsdelivr.net/gh/anamuslimvn/mahoacode@main/hafs-uthmanic-v14-full.woff2);
+}
+@font-face {
+    font-family: "hafs14";
+    src: url(https://cdn.jsdelivr.net/gh/anamuslimvn/mahoacode@main/hafs.18.woff2);
+}
+
+/* --- 2. KIỂU CHUNG & BỐ CỤC CHÍNH --- */
+.main-contenttim {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- 3. PHẦN TIÊU ĐỀ (HEADER) --- */
+.headertim {
+    text-align: center;
+    margin: 10px 0 0;
+}
+.headertim-title, .headertim-toanbo {
+    font-size: 18px;
+    color: #fff; /* Chữ màu trắng */
+    background-color: #00acee; /* Nền màu xanh dương */
+    padding: 5px;
+}
+.headertim-toanbo {
+    background-color: #006a4e; /* Nền màu xanh lá đậm */
+    padding: 8px;
+}
+
+/* --- 4. KHU VỰC HIỂN THỊ CÂU KINH (VERSE) --- */
+.verserandomtim {
+    margin-bottom: 20px;
+    position: relative; /* Dùng để định vị cho các thành phần con */
+}
+.quranarrandomtim, .quranvirandomtim {
+    font-family: "hafs14", hafs18; /* Sử dụng font Ả Rập đã tải */
+    font-size: 28px;
+    color: #333; /* Màu chữ xám đậm */
+    width: 100%;
+    padding: 5px;
+    background-color: #f9f9f9; /* Nền màu xám rất nhạt */
+    margin-bottom: 5px;
+    line-height: 1.8; /* Giãn dòng */
+    text-align: center;
+}
+.quranvirandomtim {
+    font-family: "Arial", sans-serif; /* Dùng font Arial cho bản dịch tiếng Việt */
+    font-size: 22px;
+    background-color: #eef; /* Nền màu tím nhạt */
+    line-height: 1.5;
+    text-align: left; /* Căn lề trái cho dễ đọc */
+    margin-bottom: 5px !important;
+}
+
+/* --- 5. THANH THÔNG TIN (SỐ CHƯƠNG:SỐ CÂU) VÀ NÚT ĐIỀU KHIỂN --- */
+.ayattim {
+    display: flex; /* Sắp xếp các mục con theo hàng ngang */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    position: relative;
+    padding: 5px;
+    background-color: #ccf; /* Nền màu tím nhạt hơn */
+    color: #000; /* Chữ màu đen */
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    line-height: 1.2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.controls-tim {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các nút */
+    position: absolute; /* Định vị tuyệt đối so với .ayattim */
+    right: 10px; /* Nằm ở góc phải */
+}
+.icon-audiotim {
+    width: 25px;
+    height: 25px;
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay */
+    transition: fill .3s;
+    fill: #007bff; /* Màu xanh của icon */
+    color: #007bff;
+}
+.copy-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.copy-buttontim svg {
+    width: 24px;
+    height: 24px;
+    stroke: #007bff; /* Màu viền icon sao chép */
+}
+.copy-buttontim:hover svg {
+    stroke: #0056b3; /* Đổi màu viền khi di chuột qua */
+}
+
+/* --- 6. THÔNG BÁO "ĐÃ SAO CHÉP" --- */
+.messagetim {
+    position: absolute; /* Định vị tuyệt đối */
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%); /* Kỹ thuật căn giữa */
+    background-color: #333; /* Nền đen */
+    color: #fff; /* Chữ trắng */
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* Không cho chữ xuống dòng */
+    pointer-events: none; /* Không thể tương tác với thông báo */
+    opacity: 0; /* Mặc định là ẩn */
+    transition: opacity .2s; /* Hiệu ứng mờ dần trong 0.2s */
+    font-size: 14px;
+    margin-top: 5px;
+    z-index: 1000; /* Luôn nổi lên trên các thành phần khác */
+}
+.messagetim.visible {
+    opacity: 1; /* Hiện thông báo lên */
+}
+
+/* --- 7. CÁC TRẠNG THÁI KHÁC --- */
+.loadingtim {
+    font-size: 18px;
+    text-align: center;
+    color: #007bff; /* Chữ "Đang tải..." màu xanh */
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.button {
+    padding: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    background-color: #007bff; /* Nền nút màu xanh */
+    color: #fff; /* Chữ trên nút màu trắng */
+}
+        .ayattim {
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+        }
+        .ayattim:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        
+        .tafsir-loader-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 2px !important;
+            padding: 5px;
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 400;
+            font-family: sans-serif;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        .tafsir-loader-btn:hover {
+            color: #0056b3;           
+        }
+        .tafsir-loader-btn .material-icons {
+            font-size: 24px;
+            margin-left: 4px;
+        }
+
+        .tafsirrandomtim {
+            background-color: #ffffff; /* Nền trắng */
+            border: 1px solid #e0e0e0; /* Viền xám nhạt */
+            border-radius: 8px; /* Bo góc */
+            padding: 6px; /* Thêm khoảng đệm bên trong */
+            margin-top: 10px; /* Khoảng cách với nút bấm */
+            text-align: left; /* Căn lề trái nội dung */
+        }
+      
+      
+        
+        /* THÊM MỚI: Class riêng cho văn bản dịch Tafsir */
+        .tafsir-translation-text {
+            font-family: "arial", serif; /* Giữ font giống quranvirandomtim nếu cần */
+            color: #007bff; /* Màu chữ */
+            font-size: 22px; /* Cỡ chữ */
+          font-weight: 300 !important;
+            line-height: 1.6; /* Chiều cao dòng */
+        }
